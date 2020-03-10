@@ -1,6 +1,7 @@
 const getBody = document.querySelector('.recievedBox');
 const getLike = document.querySelector('.like');
 const getLikeNum = document.querySelector('.likeNum');
+
 const getTimerButton = document.querySelector('.timerButton');
 const getTime = document.querySelector('.time');
 const getStop = document.querySelector('.stopButton');
@@ -24,23 +25,27 @@ getLike.addEventListener(('click'), likeClick)
 // //////////////////////////////////////////////////////////////////
 
 // Timer
-let time = 0;
+let time
+let number = 0
+
+increaseTime = () => {
+    number++
+    getTime.innerHTML = `${number}`;
+}
 
 
 startTimer = () => {
-    let startCount = setInterval(() => {
-        time ++;
-        getTime.innerHTML = `${time}`;
+    time = setInterval(() => {
+        increaseTime()
+
     }, 1000) 
+
 }
 
 stopTimer = () => {
-    clearInterval(startCount)
+    clearInterval(time)
 }
 
-timerClick = () => {
-    startTimer()
-}
 
-getTimerButton.addEventListener('click', timerClick)
+getTimerButton.addEventListener('click', startTimer)
 getStop.addEventListener('click', stopTimer)
