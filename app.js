@@ -47,5 +47,6 @@ stopTimer = () => {
 }
 
 
+
 getTimerButton.addEventListener('click', startTimer)
 getStop.addEventListener('click', stopTimer)
