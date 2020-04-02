@@ -6,13 +6,17 @@ const getTimerButton = document.querySelector('.timerButton');
 const getTime = document.querySelector('.time');
 const getStop = document.querySelector('.stopButton');
 
+const getImage = document.querySelector('.imageSection');
+
 
 // Like Button 
 let like = 0;
 
 increaseLike = () => {
     like ++
+    getLikeNum.classList.add('liked')
     getLikeNum.innerHTML = `${like}`
+
 }
 
 likeClick = () => {
@@ -23,6 +27,8 @@ likeClick = () => {
 getLike.addEventListener(('click'), likeClick)
 
 // //////////////////////////////////////////////////////////////////
+
+
 
 // Timer
 let time
@@ -50,3 +56,15 @@ stopTimer = () => {
 
 getTimerButton.addEventListener('click', startTimer)
 getStop.addEventListener('click', stopTimer)
+
+// ////////////////////////////////////////////////////////////
+
+// On click transformation
+turnImage = () => {
+    getImage.classList.add('.turn')
+    console.log('clicked')
+
+}
+
+getImage.addEventListener('click', turnImage)
+

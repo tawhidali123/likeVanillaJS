@@ -14,34 +14,61 @@
 }
 
 .imageSection img {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+    
 }
+
 
 .imageSection {
     grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-
-    border: 5px solid #333;
-    padding: 1.5em;
-}
-
-.articleSection {
-    grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
+    
+
+    border: 5px solid #333;
+    padding: 1.5em;
+    
+}
+
+
+
+
+
+.articleSection {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
 
     border: 5px solid #333;
     padding: 1.5em;
 }
 
 .likeBttn button {
-    padding: 10px 30px;
+    padding: 5px 20px;
     border-radius: 15px;
     background-color: brown;
     color: cornsilk;
     font-size: medium;
+
+    transition: padding 0.3s;
+}
+
+
+.likeBttn button:hover {
+    padding: 8px 25px;
+}
+
+.likedNum{
+    
+}
+
+.liked {
+    transition: font-size .5s, color .3s;
+    font-size: 20px;
+    color: green
+    
 }
